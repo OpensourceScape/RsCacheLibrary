@@ -7,10 +7,10 @@ namespace Runescape.Cache.Structures
 {
 	//Uses a byte to indicate attribute subtype
 	/// <summary>
-	/// Base type for all maptile attributes.
+	/// Base type for all map tile attributes.
 	/// </summary>
-	[DefaultChild(typeof(DefaultMapTileAttribute))] //if we encounter an attribute we don't know then we use the default (can be used for logging)
 	[WireDataContractBaseType((int)MapTileAttributeType.Default, typeof(DefaultChildAttribute))] //TODO: Maybe don't use default to mark the end?
+	[WireDataContractBaseType((int)MapTileAttributeType.RGBColor, typeof(RGBColorMapTileAttribute))]
 	[WireDataContract(WireDataContractAttribute.KeyType.Byte, InformationHandlingFlags.DontConsumeRead)]
 	public abstract class MapTileAttribute : IMapTileAttributeIdentifiable
 	{
