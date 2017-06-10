@@ -8,11 +8,6 @@ namespace Runescape.Cache
 	[WireDataContract]
 	public sealed class RegionInformation
 	{
-		/*regionHash[reg] = b.getShortUnsigned();
-		regionLandscapeIndex[reg] = b.getShortUnsigned();
-		regionObjectMapIndex[reg] = b.getShortUnsigned();
-		regionPreload[reg] = b.getUnsigned();*/
-
 		/// <summary>
 		/// Location hash for the region.
 		/// </summary>
@@ -21,14 +16,14 @@ namespace Runescape.Cache
 
 		//TODO: What is this?
 		/// <summary>
-		/// ?
+		/// The tile-map index this region uses.
 		/// </summary>
 		[WireMember(2)]
 		public ushort RegionLandscapeIndex { get; }
 
 		//TODO: What is this?
 		/// <summary>
-		/// ?
+		/// The object-map index this region uses.
 		/// </summary>
 		[WireMember(3)]
 		public ushort RegionObjectMapIndex { get; }
