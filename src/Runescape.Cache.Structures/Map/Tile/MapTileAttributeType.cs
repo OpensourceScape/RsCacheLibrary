@@ -42,8 +42,8 @@ namespace Runescape.Cache.Structures
 		Name = 6,
 
 		/// <summary>
-		/// Indicates that lighting data is included.
+		/// Indicates that a second RGB color is present.
 		/// </summary>
-		LightingData = 7
+		RgbColor2 = 7
 	}
 }
