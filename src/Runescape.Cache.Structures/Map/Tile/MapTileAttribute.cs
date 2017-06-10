@@ -12,6 +12,8 @@ namespace Runescape.Cache.Structures
 	[WireDataContractBaseType((int)MapTileAttributeType.Default, typeof(DefaultChildAttribute))] //TODO: Maybe don't use default to mark the end?
 	[WireDataContractBaseType((int)MapTileAttributeType.RGBColor, typeof(RGBColorMapTileAttribute))]
 	[WireDataContractBaseType((int)MapTileAttributeType.TextureID, typeof(TextureIdMapTileAttribute))]
+	[WireDataContractBaseType((int)MapTileAttributeType.Name, typeof(NameMapTileAttribute))]
+	[WireDataContractBaseType((int)MapTileAttributeType.Occlusion, typeof(DisableOcclusionMapTileAttribute))]
 	[WireDataContract(WireDataContractAttribute.KeyType.Byte, InformationHandlingFlags.DontConsumeRead)]
 	public abstract class MapTileAttribute : IMapTileAttributeIdentifiable
 	{
