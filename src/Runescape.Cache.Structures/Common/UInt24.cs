@@ -13,7 +13,7 @@ namespace Runescape.Cache.Structures.Common
 	/// An unsigned 24bit integer.
 	/// </summary>
 	[WireDataContract]
-	public class UInt24
+	public class UInt24 : IComparable, IComparable<UInt24>, IEquatable<UInt24>
 	{
 		/// <summary>
 		/// Internal byte representation.
@@ -51,6 +51,57 @@ namespace Runescape.Cache.Structures.Common
 		protected UInt24()
 		{
 			
+		}
+
+		public static bool operator ==(UInt24 one, UInt24 two)
+		{
+			if (one == null)
+				return two == null;
+
+			if (two == null)
+				return false;
+
+			return one.Equals(two);
+		}
+
+		public static bool operator !=(UInt24 one, UInt24 two)
+		{
+			return !(one == two);
+		}
+
+		/// <inheritdoc />
+		public int CompareTo(object obj)
+		{
+			UInt24 castedObj = obj as UInt24;
+
+			if (castedObj == null)
+				return -1;
+
+			return CompareTo(castedObj);
+		}
+
+		/// <inheritdoc />
+		public int CompareTo(UInt24 other)
+		{
+			if (other == null)
+				return -1;
+
+			return Value.CompareTo(other.Value);
+		}
+
+		/// <inheritdoc />
+		public bool Equals(UInt24 other)
+		{
+			if (other == null)
+				return false;
+
+			return other.Value == Value;
+		}
+
+		/// <inheritdoc />
+		public override bool Equals(object obj)
+		{
+			return Equals(obj as UInt24);
 		}
 	}
 }
