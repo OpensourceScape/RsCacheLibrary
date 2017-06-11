@@ -11,6 +11,7 @@ namespace Runescape.Cache
 		/// <summary>
 		/// Location hash for the region.
 		/// </summary>
+		[ReverseData] //big endian
 		[WireMember(1)]
 		public ushort RegionHash { get; }
 
@@ -18,6 +19,7 @@ namespace Runescape.Cache
 		/// <summary>
 		/// The tile-map index this region uses.
 		/// </summary>
+		[ReverseData] //big endian
 		[WireMember(2)]
 		public ushort RegionLandscapeIndex { get; }
 
@@ -25,6 +27,7 @@ namespace Runescape.Cache
 		/// <summary>
 		/// The object-map index this region uses.
 		/// </summary>
+		[ReverseData] //big endian
 		[WireMember(3)]
 		public ushort RegionObjectMapIndex { get; }
 
