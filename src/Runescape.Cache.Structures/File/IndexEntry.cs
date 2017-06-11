@@ -10,7 +10,7 @@ namespace Runescape.Cache.Structures
 	/// Index entry contained within index files.
 	/// </summary>
 	[WireDataContract]
-	public sealed class SectorHeader
+	public sealed class IndexEntry
 	{
 		/// <summary>
 		/// Represents the size of the sector.
@@ -27,7 +27,7 @@ namespace Runescape.Cache.Structures
 		/// <summary>
 		/// Protected serializer ctor.
 		/// </summary>
-		protected SectorHeader()
+		protected IndexEntry()
 		{
 			
 		}
