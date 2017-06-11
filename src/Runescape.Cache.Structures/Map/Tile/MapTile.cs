@@ -12,9 +12,23 @@ namespace Runescape.Cache.Structures
 	[WireDataContract]
 	public sealed class MapTile
 	{
+		/// <summary>
+		/// Deserialized map tile attributes.
+		/// </summary>
 		[WireMember(1)]
 		private MapTileAttribute[] _Attributes { get; }
 
+		/// <summary>
+		/// Attributes that the <see cref="MapTile"/> is composed of.
+		/// </summary>
 		public IEnumerable<MapTileAttribute> Attributes { get; }
+
+		/// <summary>
+		/// Protected serializer ctor
+		/// </summary>
+		protected MapTile()
+		{
+			
+		}
 	}
 }

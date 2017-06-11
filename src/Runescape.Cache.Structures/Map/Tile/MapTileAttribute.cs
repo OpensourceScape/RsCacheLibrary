@@ -15,7 +15,7 @@ namespace Runescape.Cache.Structures
 	[WireDataContractBaseType((int)MapTileAttributeType.TextureID, typeof(TextureIdMapTileAttribute))]
 	[WireDataContractBaseType((int)MapTileAttributeType.Name, typeof(NameMapTileAttribute))]
 	[WireDataContractBaseType((int)MapTileAttributeType.Occlusion, typeof(DisableOcclusionMapTileAttribute))]
-	[WireDataContractBaseType((int)MapTileAttributeType.RgbColor2, typeof(RGB2ColorMapTileAttribute))]
+	[WireDataContractBaseType((int)MapTileAttributeType.RgbColor2, typeof(RgbColor2MapTileAttribute))]
 	[WireDataContract(WireDataContractAttribute.KeyType.Byte, InformationHandlingFlags.DontConsumeRead)]
 	public abstract class MapTileAttribute : IMapTileAttributeIdentifiable
 	{

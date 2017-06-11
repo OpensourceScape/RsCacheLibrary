@@ -9,7 +9,7 @@ namespace Runescape.Cache.Structures
 	/// <summary>
 	/// The <see cref="RgbColor"/>2 attribute.
 	/// </summary>
-	public sealed class RGB2ColorMapTileAttribute : MapTileAttribute
+	public sealed class RgbColor2MapTileAttribute : MapTileAttribute
 	{
 		/// <summary>
 		/// Color2 attribute.
@@ -20,7 +20,7 @@ namespace Runescape.Cache.Structures
 		/// <summary>
 		/// Protected serializer ctor.
 		/// </summary>
-		protected RGB2ColorMapTileAttribute()
+		protected RgbColor2MapTileAttribute()
 		{
 
 		}
