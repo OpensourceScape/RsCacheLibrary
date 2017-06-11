@@ -18,6 +18,7 @@ namespace Runescape.Cache.Structures.Common
 		/// <summary>
 		/// Internal byte representation.
 		/// </summary>
+		[KnownSize(3)]
 		[WireMember(1)]
 		private byte[] intBytes { get; }
 
